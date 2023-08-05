@@ -1,0 +1,31 @@
+﻿@using EmployeePortal.Models
+@model Employee
+
+@{
+    ViewBag.Title = "Employee";
+}
+
+<h1>Employee Details</h1>
+
+<h4>Fill in the below details:</h4>
+
+<br />
+
+
+@using(Html.BeginForm("SaveEmployee","Employee"))
+{
+    <label>Name:</label>   
+
+    @Html.TextBoxFor(m=>m.EmployeeName)
+
+    <br />
+
+    <label>Address:</label>
+
+    @Html.TextAreaFor(m=>m.EmployeeAddress)
+
+    <br />
+
+    <button>Save</button>
+}
+
